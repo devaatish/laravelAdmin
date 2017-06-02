@@ -6,6 +6,9 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use Session;
 
 class RegisterController extends Controller
 {
@@ -50,7 +53,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            // 'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
         ]);
     }
 
@@ -67,5 +71,38 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function show()
+    {
+        return view('admin.signInlayout.signup');
+    }
+
+    public function signUp(Request $request)
+    {
+        if($request)
+        {
+            $data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password
+            ];
+
+            $validate = $this->validator($data);
+
+            if($validate->fails())
+            {
+                $error=array_flatten($validate->messages()->toArray()); 
+                Session::flash('alert-danger',$error); 
+                return redirect("AdminPanel/Signup");
+            }
+            else
+            {
+                $this->create($data);
+                Session::flash('alert-danger',['Registered Succsessfully. Please Login']); 
+                return redirect("AdminPanel");
+            }
+
+        }
     }
 }

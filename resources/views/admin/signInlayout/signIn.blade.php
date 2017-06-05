@@ -4,8 +4,7 @@
 <!-- <img class="login-logo login-6" src="{{ asset('theme/assets/pages/img/login/login-invert.png') }}" /> -->
 <div class="login-content logMidInrCont">
     <h1 class="logHdr">Admin Panel</h1> 
-   <!--  <br><br>
-    <h3 class="font-green logHdr"><b>Login</b></h3> -->
+    <h3 class="font-green logsubHdr"><b>Login</b></h3>
 
     <form action="{{ url('AdminPanel/Login')}}" class="login-form" method="post">
         {!! csrf_field() !!}
@@ -57,7 +56,7 @@
             </div>
             <div class="col-sm-8 text-right">
                 <div class="forgot-password">
-                    <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                    <a onclick="$('.logsubHdr').hide();" id="forget-password" class="forget-password">Forgot Password?</a>
                 </div>
                 <button class="btn blue" type="submit">Sign In</button>
             </div>
@@ -74,7 +73,7 @@
         <div class="form-group">
             <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" value="" /> </div>
         <div class="form-actions">
-            <button type="button" id="back-btn" class="btn grey btn-default">Back</button>
+            <button type="button" id="back-btn" class="btn grey btn-default" onclick="$('.logsubHdr').show();">Back</button>
             <button type="submit" class="btn blue btn-success uppercase pull-right">Submit</button>
         </div>
     </form>

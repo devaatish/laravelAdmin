@@ -9,9 +9,15 @@
         </li>
         <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
        
-        
-        
         <li class="nav-item  ">
+            <a href="{{url('AdminPanel/datatable')}}" class="nav-link nav-toggle">
+                <i class="icon-user"></i>
+                <span class="title">User</span>
+                <span class="arrow"></span>
+            </a>
+        </li>
+        
+        <!-- <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-puzzle"></i>
                 <span class="title">Components</span>
@@ -98,34 +104,11 @@
        
         <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="icon-user"></i>
+                <i class="icon-user"></i> //usericon
                 <span class="title">User</span>
                 <span class="arrow"></span>
             </a>
-            <ul class="sub-menu">
-               
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-notebook"></i>
-                        <span class="title">Login</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                       
-                        <li class="nav-item ">
-                            <a href="page_user_login_6.html" class="nav-link " target="_blank"> Login Page 6 </a>
-                        </li>
-                    </ul>
-                </li>
-               
-                <li class="nav-item  ">
-                    <a href="page_user_lock_2.html" class="nav-link " target="_blank">
-                        <i class="icon-lock-open"></i>
-                        <span class="title">Lock Screen 2</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
+        </li> -->
         
     </ul>
     

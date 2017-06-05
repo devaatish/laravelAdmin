@@ -15,6 +15,10 @@
         <link href="{{ asset('theme/assets/global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('theme/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
+
+        <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
+        <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">  
+
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ asset('theme/assets/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
         <link href="{{ asset('theme/assets/global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
@@ -24,7 +28,12 @@
         <link href="{{ asset('theme/assets/layouts/layout/css/themes/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
         <link href="{{ asset('theme/assets/layouts/layout/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="favicon.ico" /> 
+        <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+        <!-- <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+        // <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
+
+</head>
     <!-- END HEAD -->
 
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
@@ -45,9 +54,7 @@
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
-        <div class="page-content">
-           <!-- menu -->
-        </div>
+          @yield('content')
         <!-- END CONTENT BODY -->
     </div>
     <!-- END CONTENT -->
@@ -620,6 +627,7 @@
 @include('admin.layout.partials.footer')
  <!-- BEGIN CORE PLUGINS -->
     <script src="{{ asset('theme/assets/global/plugins/jquery.min.js ') }}" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('theme/assets/global/plugins/bootstrap/js/bootstrap.min.js ') }}" type="text/javascript"></script>
     <script src="{{ asset('theme/assets/global/plugins/js.cookie.min.js ') }}" type="text/javascript"></script>
     <script src="{{ asset('theme/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js ') }}" type="text/javascript"></script>

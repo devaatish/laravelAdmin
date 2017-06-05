@@ -42,20 +42,14 @@ Route::group(['namespace'=>'Admin','prefix'=>'AdminPanel'],function(){
 	//AdminController
 
 	Route::get('/Dashboard','AdminController@dashboard');
-});
 
-Route::get('testEmail', function ()
-{
 
-    $data = [
-        'key'     => 'value'
-    ];
+	//UserController
 
-    Mail::send('emails.test', $data, function ($message) {
-        $message->from('sunitineo@gmail.com', 'suniti');
-        $message->subject('subject');
-        $message->to('suniti.yadav@wwindia.com');
-    });
+	//for datatable
+	Route::get('datatable', ['uses'=>'UserController@datatable']);
+	Route::get('datatable/getUsers', ['as'=>'datatable.getUsers','uses'=>'UserController@getUsers']);
 
-    dd(Mail::failures());
+	Route::get('getAllUsers','UserController@getAllUsers');
+	Route::get('/Users','UserController@show');
 });

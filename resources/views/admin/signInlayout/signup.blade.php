@@ -2,8 +2,8 @@
 @section('content') 
 <div class="col-md-6 login-container bs-reset logMidOtrCont">
 <div class="login-content logMidInrCont">
-    <h1 class="logHdr">Admin Panel</h1><br> <br>
-    <h3 class="font-green logHdr">Registeration</h3>
+    <h1 class="logHdr">Admin Panel</h1>
+    <h3 class="font-green logsubHdrReg"><b>Registeration<b></h3>
     
     <form action="{{ url('AdminPanel/SignupForm')}}" class="login-form" method="post">
         {!! csrf_field() !!}

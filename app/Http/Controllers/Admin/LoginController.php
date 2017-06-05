@@ -118,59 +118,14 @@ class LoginController extends Controller
                         'url' => $url
                     ];
 
-                    /*
-                    $to = "sunitineo@gmail.com,suniti.yadav@wwindia.com";
-                    $subject = "HTML email";
-
-                    $message = "
-                    <html>
-                    <head>
-                    <title>HTML email</title>
-                    </head>
-                    <body>
-                    <p>This email contains HTML Tags!</p>
-                    <table>
-                    <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    </tr>
-                    <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    </tr>
-                    </table>
-                    </body>
-                    </html>
-                    ";
-
-                    // Always set content-type when sending HTML email
-                    $headers = "MIME-Version: 1.0" . "\r\n";
-                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                    $headers .= 'From: <sunitiyadav1@gmail.com>' . "\r\n";
-
-                    $aa = mail($to,$subject,$message,$headers);
-                    dd($aa);
-                    */
-
 
                     Mail::send('emails.forgotmail', $data, function ($message) use ($data) {
-                       // $message->from('support@neosoft.com');
-                        $message->from('sunitiyadav1@gmail.com');
-						$message->to( $data['email'] )->subject('Forgot Password Link');
+                        //$message->from('support@neosoft.com'); // this goes on spam
+                        $message->from('suniti.yadav@wwindia.com');
+                        $message->to( $data['email'] )->subject('Forgot Password Link');
                     });
-
-
-
-                    //  $ans = Mail::send('emails.forgotmail', ['name' => 'abc'], function ($message) use($data)
-                    // {
-                    //     $message->to('suniti.yadav@wwindia.com', 'suniti')->subject('Welcome to Expertphp.in!');
                     
-                    // });
-
-                    // dd($ans);
-
-
-                    $response['msg'] = "Password Reset link has been sent to your mail id.";
+                    $response['msg'] = "Password Reset link has been sent to your mail id. Please click on that link and reset your password.";
                 }else{
                     $response['msg'] = "No User exists with the provided mail id.";
                 }
@@ -181,8 +136,7 @@ class LoginController extends Controller
             }
         }
         
-        dd($response);
-	    return view('admin.signInlayout.message',$response);
+        return view('admin.signInlayout.message',$response);
     }
 
     public function resetPassword(Request $request)

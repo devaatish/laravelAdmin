@@ -181,6 +181,8 @@ return [
         LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         DougSisk\CountryState\CountryStateServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Yajra\Datatables\ButtonsServiceProvider::class,
 
     ],
 
@@ -235,6 +237,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

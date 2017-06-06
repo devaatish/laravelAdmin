@@ -11,11 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     //return view('welcome');
-//     return view('admin.layout.default');
-// });
-
 Route::group(['namespace'=>'Auth','prefix'=>'AdminPanel'],function(){
 	
 	// RegisterController
@@ -50,6 +45,12 @@ Route::group(['namespace'=>'Admin','prefix'=>'AdminPanel'],function(){
 	Route::get('datatable', ['uses'=>'UserController@datatable']);
 	Route::get('datatable/getUsers', ['as'=>'datatable.getUsers','uses'=>'UserController@getUsers']);
 
-	Route::get('getAllUsers','UserController@getAllUsers');
-	Route::get('/Users','UserController@show');
+	Route::post('delUser','UserController@delUser');
+	Route::get('AddUser','UserController@addUser');
+	Route::post('SaveUser','UserController@saveUser');
+	Route::get('EditUser/{id}','UserController@editUser');
+	Route::post('UpdateUser','UserController@updateUser');
+	Route::post('UserBan','UserController@userBan');
+	Route::post('UserUnBan','UserController@userUnBan');
+	
 });

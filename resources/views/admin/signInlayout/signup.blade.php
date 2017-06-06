@@ -11,10 +11,10 @@
             <button class="close" data-close="alert"></button>
             <span>Please fill all fields. </span>
         </div><br>
-        @if(Session::has('alert-danger'))
-            <?php $errorMsg = Session::get('alert-danger'); ?>
+        @if(Session::has('message'))
+            <?php $errorMsg = Session::get('message'); ?>
             @foreach($errorMsg as $key=>$err)
-            <div class="alert alert-danger display-hide">
+            <div class="alert {{ Session::get('alert-class', 'alert-info') }}">
                 <button class="close" data-close="alert"></button>
                 <span>{{ $err }}</span>
             </div><br>

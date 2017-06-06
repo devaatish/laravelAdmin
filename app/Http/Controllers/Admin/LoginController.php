@@ -65,7 +65,7 @@ class LoginController extends Controller
             
             if(Auth::attempt(['name'=>$request->username,'password'=>$request->password],$request->remember ? true : false))
             { 
-                return redirect('AdminPanel/Dashboard');
+                return redirect('AdminPanel/datatable');
             }
             else
             { 

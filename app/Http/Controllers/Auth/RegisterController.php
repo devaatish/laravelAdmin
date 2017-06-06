@@ -93,13 +93,15 @@ class RegisterController extends Controller
             if($validate->fails())
             {
                 $error=array_flatten($validate->messages()->toArray()); 
-                Session::flash('alert-danger',$error); 
+                Session::flash('message', $error); 
+                Session::flash('alert-class', 'alert-danger');  
                 return redirect("AdminPanel/Signup");
             }
             else
             {
                 $this->create($data);
-                Session::flash('alert-danger',['Registered Succsessfully. Please Login']); 
+                Session::flash('message', ['Registered Succsessfully. Please Login']); 
+                Session::flash('alert-class', 'alert-success'); 
                 return redirect("AdminPanel");
             }
 

@@ -37,6 +37,9 @@ Route::group(['namespace'=>'Admin','prefix'=>'AdminPanel'],function(){
 	//AdminController
 
 	Route::get('/Dashboard','AdminController@dashboard');
+	Route::get('/CountryStateCity','AdminController@index');
+	Route::get('/get-state-list','AdminController@getStateList');
+	Route::get('/get-city-list','AdminController@getCityList');
 
 
 	//UserController

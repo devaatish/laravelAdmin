@@ -17,22 +17,14 @@
             </a>
         </li>
         
-        <!-- <li class="nav-item  ">
-            <a href="javascript:;" class="nav-link nav-toggle">
+         <li class="nav-item  ">
+            <a href="{{url('AdminPanel/CountryStateCity')}}" class="nav-link nav-toggle">
                 <i class="icon-puzzle"></i>
-                <span class="title">Components</span>
+                <span class="title">Country-State-City</span>
                 <span class="arrow"></span>
             </a>
-            <ul class="sub-menu">
-                
-                <li class="nav-item  ">
-                    <a href="components_bootstrap_select.html" class="nav-link ">
-                        <span class="title">Bootstrap Select</span>
-                    </a>
-                </li>
-                
-            </ul>
         </li>
+        <!--
         <li class="nav-item  active open">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-settings"></i>

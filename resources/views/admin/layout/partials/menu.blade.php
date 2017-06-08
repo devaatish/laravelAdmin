@@ -24,6 +24,15 @@
                 <span class="arrow"></span>
             </a>
         </li>
+
+        <li class="nav-item  ">
+            <a href="{{url('AdminPanel/CMS')}}" class="nav-link nav-toggle">
+                <i class="icon-layers"></i>
+                <span class="title">CMS</span>
+                <span class="arrow"></span>
+            </a>
+        </li>
+
         <!--
         <li class="nav-item  active open">
             <a href="javascript:;" class="nav-link nav-toggle">

@@ -45,4 +45,14 @@ class AdminController extends Controller
         return response()->json($cities);
     }
 
+    public function showcms()
+    {
+        return view('admin.CMS.cmspage');
+    }
+
+    public function saveCMS(Request $request)
+    {
+       dd($request->all());  
+    }
+
 }

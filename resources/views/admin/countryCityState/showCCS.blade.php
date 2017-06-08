@@ -38,14 +38,14 @@
 						    <div class="form-group">
 						        <label class="control-label col-md-3" for="title">Select State:</label>
 						        <div class="col-md-4">
-						        	<select name="state" id="state" class="bs-select form-control"></select>
+						        	<select name="state" id="state" class="form-control"></select>
 						        </div>
 						    </div>
 						 
 						    <div class="form-group">
 						        <label class="control-label col-md-3" for="title">Select City:</label>
 						        <div class="col-md-4">
-						        	<select name="city" id="city" class="bs-select form-control"></select>
+						        	<select name="city" id="city" class="form-control"></select>
 						        </div>
 						    </div>
 						</div>

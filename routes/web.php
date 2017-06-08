@@ -41,6 +41,9 @@ Route::group(['namespace'=>'Admin','prefix'=>'AdminPanel'],function(){
 	Route::get('/get-state-list','AdminController@getStateList');
 	Route::get('/get-city-list','AdminController@getCityList');
 
+	Route::get('/CMS','AdminController@showcms');
+	Route::post('/saveCMS','AdminController@saveCMS');
+
 
 	//UserController
 

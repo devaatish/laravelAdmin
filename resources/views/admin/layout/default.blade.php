@@ -81,9 +81,25 @@
     <script src="{{ asset('theme/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js ') }}" type="text/javascript"></script>
     
     <!-- END CORE PLUGINS -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{ asset('theme/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js ') }}" type="text/javascript"></script>
+    <script src="{{ asset('theme/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js ') }}" type="text/javascript"></script>
+    <script src="{{ asset('theme/assets/global/plugins/bootstrap-markdown/lib/markdown.js ') }}" type="text/javascript"></script>
+    <script src="{{ asset('theme/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js ') }}" type="text/javascript"></script>
+    <script src="{{ asset('theme/assets/global/plugins/bootstrap-summernote/summernote.min.js ') }}" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="{{ asset('theme/assets/global/scripts/app.min.js ') }}" type="text/javascript"></script>
     <!-- END THEME GLOBAL SCRIPTS -->
+
+    <!-- FOR EDITOR SCRIPTS -->
+    <script src="{{ asset('theme/assets/pages/scripts/components-editors.min.js ') }}" type="text/javascript"></script>
+    <!-- END FOR EDITOR SCRIPTS -->
+
+    <script src="{{ asset('theme/assets/pages/scripts/components-bootstrap-select.min.js') }}" type="text/javascript"></script>
+
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <script src="{{ asset('theme/assets/layouts/layout/scripts/layout.min.js ') }}" type="text/javascript"></script>
     <script src="{{ asset('theme/assets/layouts/layout/scripts/demo.min.js ') }}" type="text/javascript"></script>
